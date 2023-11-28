@@ -1,0 +1,16 @@
+/* You can add global styles to this file, and also import other style files */
+* {
+  font-family: "Verdana", sans-serif;
+}
+body {
+  padding: 0px;
+  margin: 0px;
+}
+.p-dialog .p-dialog-header {
+  background-color: #216521 !important;
+  color: #ffffff !important;
+  padding: 0.5rem !important;
+}
+.p-dialog .p-dialog-header .p-dialog-title {
+  font-size: 1rem !important;
+}

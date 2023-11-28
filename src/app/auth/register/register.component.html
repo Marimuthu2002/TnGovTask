@@ -1,0 +1,148 @@
+<p-dialog header="If You Confirm Your Data" [(visible)]="visible" [modal]="true" [style]="{ width: '70vw' }"
+    [draggable]="false" [resizable]="false">
+    <ng-template pTemplate="body">
+        <ng-container *ngIf="!editVisible">
+            <div class="grid">
+                <div class="lg:col-6 pt-6 pb-4">
+                    <span class="font-bold">First name :</span>
+                    {{tempData.firstname}}
+                </div>
+                <div class="lg:col-6 pt-6 pb-4">
+                    <span class="font-bold">Last name :</span>
+                    {{tempData.lastname}}
+                </div>
+            </div>
+            <div class="grid">
+                <div class="lg:col-6  py-4">
+                    <span class="font-bold">Gmail :</span>
+                    {{tempData.gmail}}
+                </div>
+                <div class="lg:col-6  py-4">
+                    <span class="font-bold">Phone Number :</span>
+                    {{tempData.phoneNumber}}
+                </div>
+            </div>
+            <div class="grid">
+                <div class="lg:col-6  py-4">
+                    <span class="font-bold">Date Of Birth :</span>
+                    {{tempData.dateOfBirth | date:'dd/MM/yyyy'}}
+                </div>
+                <div class="lg:col-6  py-4">
+                    <span class="font-bold">Adhar Number :</span>
+                    {{tempData.adharNumber}}
+                </div>
+            </div>
+        </ng-container>
+        <ng-container *ngIf="editVisible">
+            <div class="grid">
+                <div class="lg:col-6 mt-5 mb-4">
+                    <input pInputText type="text" [(ngModel)]="tempData.firstname" class="p-inputtext-sm  w-full"
+                        placeholder="Firstname" />
+                </div>
+                <div class="lg:col-6 mt-5 mb-4">
+                    <input pInputText type="text" [(ngModel)]="tempData.lastname" class="p-inputtext-sm  w-full"
+                        placeholder="Lastname" />
+                </div>
+            </div>
+            <div class="grid">
+                <div class="lg:col-6 mb-4">
+                    <input pInputText type="text" [(ngModel)]="tempData.gmail" class="p-inputtext-sm w-full"
+                        placeholder="Gmail" />
+                </div>
+                <div class="lg:col-6 mb-4">
+                    <input pInputText type="text" [(ngModel)]="tempData.phoneNumber" class="p-inputtext-sm  w-full"
+                        placeholder="Phone Number" />
+                </div>
+            </div>
+            <div class="grid">
+                <div class="lg:col-6 mb-4">
+                    <p-calendar class="p-inputtext-sm" [(ngModel)]="tempData.dateOfBirth" placeholder="Date Of Birth"
+                        dateFormat="dd.mm.yy"></p-calendar>
+                </div>
+                <div class="lg:col-6 mb-4">
+                    <input pInputText type="text" [(ngModel)]="tempData.adharNumber" class="p-inputtext-sm  w-full"
+                        placeholder="Adhar Number" />
+                </div>
+            </div>
+        </ng-container>
+    </ng-template>
+    <ng-template pTemplate="footer">
+        <button pButton *ngIf="!editVisible" class="p-button-secondary" (click)="editData()" label="Edit"></button>
+        <p-button (click)="submitData(tempData)" label="Submit"></p-button>
+    </ng-template>
+</p-dialog>
+<p-dialog header="Your Credential Details" [(visible)]="userDetailsVisible" [modal]="true" [style]="{ width: '40vw' }"
+    [draggable]="false" [resizable]="false">
+    <ng-template pTemplate="body">
+        <div class="grid">
+            <div class="lg:col-12 pt-6 px-8 pt-6 pb-4">
+                <span class="font-bold pl-8">Username :</span>
+                {{userDetails.userName}}
+            </div>
+            <div class="lg:col-12 pt-6 px-8 py-4">
+                <span class="font-bold pl-8">Password :</span>
+                {{userDetails.password}}
+            </div>
+            <div class="lg:col-6 pt-6 pb-4">
+                <p-button (click)="downloadPdf()">Download</p-button>
+            </div>
+        </div>
+    </ng-template>
+    <ng-template pTemplate="footer">
+        <p-button (click)="submitData(tempData)" label="Submit"></p-button>
+    </ng-template>
+</p-dialog>
+<div class="login-page">
+    <div class="form text-center">
+        <div style="color: #216521;">
+            <h2 class="m-0 mb-4">REGISTER</h2>
+        </div>
+        <div>
+            <img src="./../../assets/images/tn-gov.png" alt="" width="12%">
+        </div>
+        <div style="color: #216521;">
+            <h4 class="m-0 mb-4 text-xs">GOVERNMENT OF TAMIL NADU</h4>
+        </div>
+        <div class="grid">
+            <div class="lg:col-6 mb-4">
+                <input pInputText type="text" [(ngModel)]="tempData.firstname" class="p-inputtext-sm w-20rem"
+                    placeholder="Firstname" />
+            </div>
+            <div class="lg:col-6 mb-4">
+                <input pInputText type="text" [(ngModel)]="tempData.lastname" class="p-inputtext-sm w-20rem"
+                    placeholder="Lastname" />
+            </div>
+        </div>
+        <div class="grid">
+            <div class="lg:col-6 mb-4">
+                <input pInputText type="text" [(ngModel)]="tempData.gmail" class="p-inputtext-sm w-20rem"
+                    placeholder="Gmail" />
+            </div>
+            <div class="lg:col-6 mb-4">
+                <input pInputText type="text" [(ngModel)]="tempData.phoneNumber" class="p-inputtext-sm w-20rem"
+                    placeholder="Phone Number" />
+            </div>
+        </div>
+        <div class="grid">
+            <div class="lg:col-6 mb-4">
+                <p-calendar class="p-inputtext-sm" [(ngModel)]="tempData.dateOfBirth" placeholder="Date Of Birth"
+                    dateFormat="dd.mm.yy"></p-calendar>
+            </div>
+            <div class="lg:col-6 mb-4">
+                <input pInputText type="text" [(ngModel)]="tempData.adharNumber" class="p-inputtext-sm w-20rem"
+                    placeholder="Adhar Number" />
+            </div>
+        </div>
+        <div class="grid">
+            <div class="lg:col-6 text-left">
+                <p class="m-0 mt-2 text-xs">Already a user? <a href="">LOGIN</a></p>
+            </div>
+            <div class="lg:col-6 text-right">
+                <p-button (click)="showDialog()" label="Submit"></p-button>
+            </div>
+            <div class="lg:col-6 text-right">
+                <p-button (click)="downloadPadf()" label="Submit"></p-button>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,16 @@
+.login-page {
+  display: grid;
+  place-content: center;
+  height: 100vh;
+  background: url(./../../../assets/images/RockMemorial.jpg);
+  background-size: cover;
+}
+.form {
+  background: #ffffffc5;
+  padding: 45px;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+  border-radius: 7px;
+}
+::ng-deep .p-calendar {
+  width: 100% !important;
+}

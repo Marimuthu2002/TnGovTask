@@ -1,0 +1,54 @@
+.side_bar {
+    margin: 14px 8px;
+    width: 250px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 12px;
+}
+
+.content {
+    padding: 6%;
+}
+
+h6 {
+    line-height: 10px;
+    line-height: 25px;
+}
+
+.fa-times {
+    margin: 12px 15px;
+    font-size: 19px;
+    cursor: pointer;
+    color: #1F6B8E;
+}
+
+
+.acordian_heder {
+    display: flex;
+}
+
+.Icone {
+    margin: 3% 10%;
+    cursor: pointer;
+    font-size: 23px;
+}
+
+h5 {
+    color: #166B90;
+    margin: 3% 16%;
+}
+
+.acordian_content a {
+    color: black;
+    display: block;
+    text-decoration: none;
+    line-height: 32px;
+    margin-left: 21px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.activeLink{
+    color: #166B90 !important;
+    font-weight: bold;
+}
+

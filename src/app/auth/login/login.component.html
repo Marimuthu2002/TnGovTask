@@ -1,0 +1,30 @@
+<p-toast></p-toast>
+<div class="login-page">
+    <div class="form text-center">
+        <div style="color: #216521;">
+            <h2 class="m-0 mb-4">LOGIN</h2>
+        </div>
+        <div>
+            <img src="./../../assets/images/tn-gov.png" alt="" width="22%">
+        </div>
+        <div style="color: #216521;">
+            <h4 class="m-0 mb-4 text-xs">GOVERNMENT OF TAMIL NADU</h4>
+        </div>
+        <div class="mb-4">
+            <input pInputText type="text" [(ngModel)]="tempData.userName" class="p-inputtext-sm w-20rem"
+                placeholder="Username" />
+        </div>
+        <div class="mb-4">
+            <input pInputText type="text" [(ngModel)]="tempData.Password" class="p-inputtext-sm w-20rem"
+                placeholder="Password" />
+        </div>
+        <div class="grid">
+            <div class="lg:col-7" style="display: grid;place-content: center;">
+                <p class="m-0 text-xs">Need an Account? <a href="" routerLink="/rigister">REGISTER</a></p>
+            </div>
+            <div class="lg:col-5 text-right">
+                <p-button (onClick)="submitData(tempData)" label="Submit"></p-button>
+            </div>
+        </div>
+    </div>
+</div>

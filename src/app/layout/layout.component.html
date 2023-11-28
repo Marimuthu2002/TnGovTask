@@ -1,0 +1,10 @@
+<app-header (showSidebar)="showSidebar = true" (hideSidebar)="showSidebar = false" ></app-header>
+<div class="sideBar">
+    <div class="h-100">
+        <app-sidebar [show]="showSidebar"></app-sidebar>
+    </div>
+    <div class="cmsContent" >
+        <router-outlet></router-outlet>
+    </div>
+</div>
+<app-footer></app-footer>

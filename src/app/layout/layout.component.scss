@@ -1,0 +1,25 @@
+.sideBar {
+    display: flex;
+    height: 78vh;
+}
+
+.cmsContent {
+    width: 100%;
+    padding: 1% 1%;
+    border-radius: 10px;
+    margin: 12px 8px;
+    height: 100%;
+    overflow-x: auto;
+}
+
+@media only screen and (max-width: 990px) {
+    .sideBar {
+        display: block;
+    }
+
+    @media only screen and (max-width:900px) {
+        .cmsContent{
+            width: 92%;
+        }
+    }
+}
