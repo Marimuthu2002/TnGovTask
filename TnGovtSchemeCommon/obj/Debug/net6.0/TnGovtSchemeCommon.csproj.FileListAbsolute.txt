@@ -1,0 +1,12 @@
+G:\GovtProTask\tngovschemeAPI\TnGovtSchemeCommon\bin\Debug\net6.0\TnGovtSchemeCommon.deps.json
+G:\GovtProTask\tngovschemeAPI\TnGovtSchemeCommon\bin\Debug\net6.0\TnGovtSchemeCommon.dll
+G:\GovtProTask\tngovschemeAPI\TnGovtSchemeCommon\bin\Debug\net6.0\TnGovtSchemeCommon.pdb
+G:\GovtProTask\tngovschemeAPI\TnGovtSchemeCommon\obj\Debug\net6.0\TnGovtSchemeCommon.csproj.AssemblyReference.cache
+G:\GovtProTask\tngovschemeAPI\TnGovtSchemeCommon\obj\Debug\net6.0\TnGovtSchemeCommon.GeneratedMSBuildEditorConfig.editorconfig
+G:\GovtProTask\tngovschemeAPI\TnGovtSchemeCommon\obj\Debug\net6.0\TnGovtSchemeCommon.AssemblyInfoInputs.cache
+G:\GovtProTask\tngovschemeAPI\TnGovtSchemeCommon\obj\Debug\net6.0\TnGovtSchemeCommon.AssemblyInfo.cs
+G:\GovtProTask\tngovschemeAPI\TnGovtSchemeCommon\obj\Debug\net6.0\TnGovtSchemeCommon.csproj.CoreCompileInputs.cache
+G:\GovtProTask\tngovschemeAPI\TnGovtSchemeCommon\obj\Debug\net6.0\TnGovtSchemeCommon.dll
+G:\GovtProTask\tngovschemeAPI\TnGovtSchemeCommon\obj\Debug\net6.0\refint\TnGovtSchemeCommon.dll
+G:\GovtProTask\tngovschemeAPI\TnGovtSchemeCommon\obj\Debug\net6.0\TnGovtSchemeCommon.pdb
+G:\GovtProTask\tngovschemeAPI\TnGovtSchemeCommon\obj\Debug\net6.0\ref\TnGovtSchemeCommon.dll

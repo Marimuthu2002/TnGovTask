@@ -1,0 +1,314 @@
+{
+  "format": 1,
+  "restore": {
+    "G:\\GovtProTask\\tngovschemeAPI\\TnGovScheme\\TnGovScheme.csproj": {}
+  },
+  "projects": {
+    "G:\\GovtProTask\\tngovschemeAPI\\TnGovScheme\\TnGovScheme.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "G:\\GovtProTask\\tngovschemeAPI\\TnGovScheme\\TnGovScheme.csproj",
+        "projectName": "TnGovScheme",
+        "projectPath": "G:\\GovtProTask\\tngovschemeAPI\\TnGovScheme\\TnGovScheme.csproj",
+        "packagesPath": "C:\\Users\\visualapp\\.nuget\\packages\\",
+        "outputPath": "G:\\GovtProTask\\tngovschemeAPI\\TnGovScheme\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\visualapp\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\sdk\\7.0.306\\Sdks\\Microsoft.NET.Sdk.Web\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://pkgs.dev.azure.com/Znalytics/_packaging/eos-global/nuget/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "G:\\GovtProTask\\tngovschemeAPI\\TnGovtSchemeCommon\\TnGovtSchemeCommon.csproj": {
+                "projectPath": "G:\\GovtProTask\\tngovschemeAPI\\TnGovtSchemeCommon\\TnGovtSchemeCommon.csproj"
+              },
+              "G:\\GovtProTask\\tngovschemeAPI\\TnGovtSchemeLogic\\TnGovtSchemeLogic.csproj": {
+                "projectPath": "G:\\GovtProTask\\tngovschemeAPI\\TnGovtSchemeLogic\\TnGovtSchemeLogic.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "MediatR": {
+              "target": "Package",
+              "version": "[11.1.0, )"
+            },
+            "MediatR.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[11.1.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[6.5.0, )"
+            },
+            "itext7": {
+              "target": "Package",
+              "version": "[8.0.2, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.306\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "G:\\GovtProTask\\tngovschemeAPI\\TnGovtSchemeCommon\\TnGovtSchemeCommon.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "G:\\GovtProTask\\tngovschemeAPI\\TnGovtSchemeCommon\\TnGovtSchemeCommon.csproj",
+        "projectName": "TnGovtSchemeCommon",
+        "projectPath": "G:\\GovtProTask\\tngovschemeAPI\\TnGovtSchemeCommon\\TnGovtSchemeCommon.csproj",
+        "packagesPath": "C:\\Users\\visualapp\\.nuget\\packages\\",
+        "outputPath": "G:\\GovtProTask\\tngovschemeAPI\\TnGovtSchemeCommon\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\visualapp\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://pkgs.dev.azure.com/Znalytics/_packaging/eos-global/nuget/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "BouncyCastle": {
+              "target": "Package",
+              "version": "[1.8.9, )"
+            },
+            "MediatR": {
+              "target": "Package",
+              "version": "[11.1.0, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[6.0.25, )"
+            },
+            "Microsoft.Extensions.Configuration.Abstractions": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Syncfusion.Pdf.Net.Core": {
+              "target": "Package",
+              "version": "[23.2.5, )"
+            },
+            "System.IdentityModel.Tokens.Jwt": {
+              "target": "Package",
+              "version": "[7.0.3, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.306\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "G:\\GovtProTask\\tngovschemeAPI\\TnGovtSchemeLogic\\TnGovtSchemeLogic.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "G:\\GovtProTask\\tngovschemeAPI\\TnGovtSchemeLogic\\TnGovtSchemeLogic.csproj",
+        "projectName": "TnGovtSchemeLogic",
+        "projectPath": "G:\\GovtProTask\\tngovschemeAPI\\TnGovtSchemeLogic\\TnGovtSchemeLogic.csproj",
+        "packagesPath": "C:\\Users\\visualapp\\.nuget\\packages\\",
+        "outputPath": "G:\\GovtProTask\\tngovschemeAPI\\TnGovtSchemeLogic\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\visualapp\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://pkgs.dev.azure.com/Znalytics/_packaging/eos-global/nuget/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "G:\\GovtProTask\\tngovschemeAPI\\TnGovtSchemeCommon\\TnGovtSchemeCommon.csproj": {
+                "projectPath": "G:\\GovtProTask\\tngovschemeAPI\\TnGovtSchemeCommon\\TnGovtSchemeCommon.csproj"
+              },
+              "G:\\GovtProTask\\tngovschemeAPI\\TnGovtSchemeRepository\\TnGovtSchemeRepository.csproj": {
+                "projectPath": "G:\\GovtProTask\\tngovschemeAPI\\TnGovtSchemeRepository\\TnGovtSchemeRepository.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "MediatR": {
+              "target": "Package",
+              "version": "[11.1.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.306\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "G:\\GovtProTask\\tngovschemeAPI\\TnGovtSchemeRepository\\TnGovtSchemeRepository.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "G:\\GovtProTask\\tngovschemeAPI\\TnGovtSchemeRepository\\TnGovtSchemeRepository.csproj",
+        "projectName": "TnGovtSchemeRepository",
+        "projectPath": "G:\\GovtProTask\\tngovschemeAPI\\TnGovtSchemeRepository\\TnGovtSchemeRepository.csproj",
+        "packagesPath": "C:\\Users\\visualapp\\.nuget\\packages\\",
+        "outputPath": "G:\\GovtProTask\\tngovschemeAPI\\TnGovtSchemeRepository\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\visualapp\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://pkgs.dev.azure.com/Znalytics/_packaging/eos-global/nuget/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "G:\\GovtProTask\\tngovschemeAPI\\TnGovtSchemeCommon\\TnGovtSchemeCommon.csproj": {
+                "projectPath": "G:\\GovtProTask\\tngovschemeAPI\\TnGovtSchemeCommon\\TnGovtSchemeCommon.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "MediatR": {
+              "target": "Package",
+              "version": "[11.1.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.306\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
