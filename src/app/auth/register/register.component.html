@@ -37,7 +37,8 @@
             <div class="grid">
                 <div class="lg:col-6 mt-5 mb-4">
                     <input pInputText type="text" [(ngModel)]="tempData.firstname" class="p-inputtext-sm  w-full"
-                        placeholder="Firstname" />
+                        placeholder="Firstname">
+
                 </div>
                 <div class="lg:col-6 mt-5 mb-4">
                     <input pInputText type="text" [(ngModel)]="tempData.lastname" class="p-inputtext-sm  w-full"
@@ -68,7 +69,8 @@
     </ng-template>
     <ng-template pTemplate="footer">
         <button pButton *ngIf="!editVisible" class="p-button-secondary" (click)="editData()" label="Edit"></button>
-        <p-button (click)="submitData(tempData)" label="Submit"></p-button>
+        <p-button (onClick)="submitData(tempData);tempData.reset({});" [disabled]="tempData.invalid?true:false"
+            label="Submit"></p-button>
     </ng-template>
 </p-dialog>
 <p-dialog header="Your Credential Details" [(visible)]="userDetailsVisible" [modal]="true" [style]="{ width: '40vw' }"
@@ -83,13 +85,10 @@
                 <span class="font-bold pl-8">Password :</span>
                 {{userDetails.password}}
             </div>
-            <div class="lg:col-6 pt-6 pb-4">
-                <p-button (click)="downloadPdf()">Download</p-button>
+            <div class="lg:col-12 text-right pt-6 pb-4">
+                <p-button (click)="downloadPdf(userDetails)">Download</p-button>
             </div>
         </div>
-    </ng-template>
-    <ng-template pTemplate="footer">
-        <p-button (click)="submitData(tempData)" label="Submit"></p-button>
     </ng-template>
 </p-dialog>
 <div class="login-page">
@@ -106,31 +105,73 @@
         <div class="grid">
             <div class="lg:col-6 mb-4">
                 <input pInputText type="text" [(ngModel)]="tempData.firstname" class="p-inputtext-sm w-20rem"
-                    placeholder="Firstname" />
+                    placeholder="Firstname" #firstname="ngModel" name="firstname" [required]="true" [ngClass]="{'ng-dirty':
+                    firstname.dirty||firstname.touched,
+                    'ng-invalid': firstname.errors}" />
+                <div class="text-left" *ngIf="firstname.invalid && (firstname.dirty || firstname.touched)">
+                    <span class="text-red-500 text-sm" *ngIf="firstname.errors?.['required']">
+                        Firstname is required
+                    </span>
+                </div>
             </div>
             <div class="lg:col-6 mb-4">
                 <input pInputText type="text" [(ngModel)]="tempData.lastname" class="p-inputtext-sm w-20rem"
-                    placeholder="Lastname" />
+                    placeholder="Lastname" #lastname="ngModel" name="lastname" [required]="true" [ngClass]="{'ng-dirty':
+                    lastname.dirty||lastname.touched,
+                    'ng-invalid': lastname.errors}" />
+                <div class="text-left" *ngIf="lastname.invalid && (lastname.dirty || lastname.touched)">
+                    <span class="text-red-500 text-sm" *ngIf="lastname.errors?.['required']">
+                        Lastname is required
+                    </span>
+                </div>
             </div>
         </div>
         <div class="grid">
             <div class="lg:col-6 mb-4">
                 <input pInputText type="text" [(ngModel)]="tempData.gmail" class="p-inputtext-sm w-20rem"
-                    placeholder="Gmail" />
+                    placeholder="Gmail" #gmail="ngModel" name="gmail" [required]="true" [ngClass]="{'ng-dirty':
+                    gmail.dirty||gmail.touched,
+                    'ng-invalid': gmail.errors}" />
+                <div class="text-left" *ngIf="gmail.invalid && (gmail.dirty || gmail.touched)">
+                    <span class="text-red-500 text-sm" *ngIf="gmail.errors?.['required']">
+                        Gmail is required
+                    </span>
+                </div>
             </div>
             <div class="lg:col-6 mb-4">
                 <input pInputText type="text" [(ngModel)]="tempData.phoneNumber" class="p-inputtext-sm w-20rem"
-                    placeholder="Phone Number" />
+                    placeholder="Phone Number" #phoneNumber="ngModel" name="phoneNumber" [required]="true" [ngClass]="{'ng-dirty':
+                    phoneNumber.dirty||phoneNumber.touched,
+                    'ng-invalid': phoneNumber.errors}" />
+                <div class="text-left" *ngIf="phoneNumber.invalid && (phoneNumber.dirty || phoneNumber.touched)">
+                    <span class="text-red-500 text-sm" *ngIf="phoneNumber.errors?.['required']">
+                        Phone Number is required
+                    </span>
+                </div>
             </div>
         </div>
         <div class="grid">
             <div class="lg:col-6 mb-4">
                 <p-calendar class="p-inputtext-sm" [(ngModel)]="tempData.dateOfBirth" placeholder="Date Of Birth"
-                    dateFormat="dd.mm.yy"></p-calendar>
+                    dateFormat="dd.mm.yy" #dateOfBirth="ngModel" name="dateOfBirth" [required]="true" [ngClass]="{'ng-dirty':
+                    dateOfBirth.dirty||dateOfBirth.touched,
+                    'ng-invalid': dateOfBirth.errors}"></p-calendar>
+                <div class="text-left" *ngIf="dateOfBirth.invalid && (dateOfBirth.dirty || dateOfBirth.touched)">
+                    <span class="text-red-500 text-sm" *ngIf="dateOfBirth.errors?.['required']">
+                        Date Of Birth is required
+                    </span>
+                </div>
             </div>
             <div class="lg:col-6 mb-4">
                 <input pInputText type="text" [(ngModel)]="tempData.adharNumber" class="p-inputtext-sm w-20rem"
-                    placeholder="Adhar Number" />
+                    placeholder="Adhar Number" #phoneNumber="ngModel" name="phoneNumber" [required]="true" [ngClass]="{'ng-dirty':
+                    phoneNumber.dirty||phoneNumber.touched,
+                    'ng-invalid': phoneNumber.errors}" />
+                <div class="text-left" *ngIf="phoneNumber.invalid && (phoneNumber.dirty || phoneNumber.touched)">
+                    <span class="text-red-500 text-sm" *ngIf="phoneNumber.errors?.['required']">
+                        Phone Number is required
+                    </span>
+                </div>
             </div>
         </div>
         <div class="grid">
@@ -138,10 +179,8 @@
                 <p class="m-0 mt-2 text-xs">Already a user? <a href="">LOGIN</a></p>
             </div>
             <div class="lg:col-6 text-right">
-                <p-button (click)="showDialog()" label="Submit"></p-button>
-            </div>
-            <div class="lg:col-6 text-right">
-                <p-button (click)="downloadPadf()" label="Submit"></p-button>
+                <p-button (onClick)="showDialog();tempData.reset({});" [disabled]="tempData.invalid ? true:false"
+                    label="Submit"></p-button>
             </div>
         </div>
     </div>

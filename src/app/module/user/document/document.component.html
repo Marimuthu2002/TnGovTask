@@ -1,0 +1,83 @@
+<div class="">
+    <div class="grid px-8 py-4">
+        <div class="lg:col-12">
+            <table>
+                <thead>
+                    <tr>
+                        <th style="width: 20%;">Specification</th>
+                        <th>Photo</th>
+                        <th>Signature</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>File Format</td>
+                        <td>Pdf</td>
+                        <td>Pdf</td>
+                    </tr>
+                    <tr>
+                        <td>File Size</td>
+                        <td>100 KB</td>
+                        <td>60 KB</td>
+                    </tr>
+                    <tr>
+                        <td>File Dimensions</td>
+                        <td>3.5cm X 4.5cm</td>
+                        <td>3.5cm X 1.5cm</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="lg:col-6 pt-4 pb-2">
+            <label for="">Aadhar Card :</label>
+            <div class="card flex pt-3">
+                <p-fileUpload mode="basic" chooseLabel="Choose" name="demo[]"
+                    url="https://www.primefaces.org/cdn/api/upload.php" accept=".pdf"
+                    (onSelect)="onUpload($event)"></p-fileUpload>
+            </div>
+        </div>
+        <div class="lg:col-6 pt-4 pb-2">
+            <label for="">IncomeTax Certificate :</label>
+            <div class="card flex pt-3">
+                <p-fileUpload mode="basic" chooseLabel="Choose" name="demo[]"
+                    url="https://www.primefaces.org/cdn/api/upload.php" accept=".pdf"
+                    (onSelect)="onUpload($event)"></p-fileUpload>
+            </div>
+        </div>
+        <div class="lg:col-6 py-2">
+            <label for="">Residential Certificate :</label>
+            <div class="card flex pt-3">
+                <p-fileUpload mode="basic" chooseLabel="Choose" name="demo[]"
+                    url="https://www.primefaces.org/cdn/api/upload.php" accept=".pdf"
+                    (onSelect)="onUpload($event)"></p-fileUpload>
+            </div>
+        </div>
+        <div class="lg:col-6 py-2">
+            <label for="">Comunity Cerificate :</label>
+            <div class="card flex pt-3">
+                <p-fileUpload mode="basic" chooseLabel="Choose" name="demo[]"
+                    url="https://www.primefaces.org/cdn/api/upload.php" accept=".pdf"
+                    (onSelect)="onUpload($event)"></p-fileUpload>
+            </div>
+        </div>
+        <div class="lg:col-6 py-2">
+            <label for="">Pan Card :</label>
+            <div class="card flex pt-3">
+                <p-fileUpload mode="basic" chooseLabel="Choose" name="demo[]"
+                    url="https://www.primefaces.org/cdn/api/upload.php" accept=".pdf"
+                    (onSelect)="onUpload($event)"></p-fileUpload>
+            </div>
+        </div>
+        <div class="lg:col-6 py-2">
+            <label for="">Signature :</label>
+            <div class="card flex pt-3">
+                <p-fileUpload mode="basic" chooseLabel="Choose" name="demo[]"
+                    url="https://www.primefaces.org/cdn/api/upload.php" accept=".pdf"
+                    (onSelect)="onUpload($event)"></p-fileUpload>
+            </div>
+        </div>
+        <div class="text-right lg:col-12 py-6">
+            <p-button (click)="uploadFile()">Submit</p-button>
+        </div>
+    </div>
+</div>

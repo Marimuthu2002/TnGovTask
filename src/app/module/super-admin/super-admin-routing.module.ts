@@ -1,8 +1,9 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { SuperAdminComponent } from './super-admin.component';
+import { DashbordComponent } from './dashbord/dashbord.component';
 
-const routes: Routes = [{ path: '', component: SuperAdminComponent }];
+const routes: Routes = [{ path: '', component: DashbordComponent }];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],

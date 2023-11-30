@@ -1,1 +1,70 @@
-<p>admin-dashboard works!</p>
+<p-dialog header="If You Verify the Data" [(visible)]="visible" [modal]="true" [style]="{ width: '70vw' }"
+    [draggable]="false" [resizable]="false">
+    <ng-template pTemplate="body">
+        <div class="grid">
+            <div class="lg:col-6 pt-6 pb-4">
+                <span class="font-bold">First name :</span>
+                {{item.firstname}}
+            </div>
+            <div class="lg:col-6 pt-6 pb-4">
+                <span class="font-bold">Last name :</span>
+                {{item.lastname}}
+            </div>
+        </div>
+        <div class="grid">
+            <div class="lg:col-6  py-4">
+                <span class="font-bold">Gmail :</span>
+                {{item.email}}
+            </div>
+            <div class="lg:col-6  py-4">
+                <span class="font-bold">Phone Number :</span>
+                {{item.mobilenumber}}
+            </div>
+        </div>
+        <div class="grid">
+            <div class="lg:col-6  py-4">
+                <span class="font-bold">Date Of Birth :</span>
+                {{item.dateOfBirth | date:'dd/MM/yyyy'}}
+            </div>
+            <div class="lg:col-6  py-4">
+                <span class="font-bold">Adhar Number :</span>
+                {{item.aadhar}}
+            </div>
+        </div>
+        <div class="grid">
+            <div class="lg:col-6  py-4">
+                <span class="font-bold">Username :</span>
+                {{item.userName}}
+            </div>
+            <div class="lg:col-6  py-4">
+                <span class="font-bold">Role :</span>
+                {{item.role}}
+            </div>
+        </div>
+    </ng-template>
+    <ng-template pTemplate="footer">
+        <button pButton class="p-button-danger" label="Reject"></button>
+        <p-button label="Verify"></p-button>
+    </ng-template>
+</p-dialog>
+<p-table [value]="getAllData" [scrollable]="true" scrollDirection="both" scrollHeight="600px"
+    styleClass="p-datatable-sm p-datatable-gridlines">
+    <ng-template pTemplate="header">
+        <tr>
+            <th>User Name</th>
+            <th>Email</th>
+            <th>Mobile Number</th>
+            <th>Aadhar Number</th>
+            <th>User Id</th>
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-product>
+        <tr>
+            <td>{{product.firstname}} {{product.lastname}}</td>
+            <td>{{product.email}}</td>
+            <td>{{product.mobilenumber}}</td>
+            <td>{{product.aadhar}}</td>
+            <td (click)="getUserData(product)">{{product.userName}}</td>
+        </tr>
+    </ng-template>
+</p-table>

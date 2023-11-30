@@ -1,0 +1,7 @@
+<div class="CenterLine">
+    <p-timeline [value]="events" class="w-full md:w-20rem" align="alternate">
+        <ng-template pTemplate="content" let-event>
+            {{ event.status }}
+        </ng-template>
+    </p-timeline>
+</div>

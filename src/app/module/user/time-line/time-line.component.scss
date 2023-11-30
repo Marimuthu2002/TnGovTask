@@ -1,0 +1,8 @@
+.CenterLine{
+    display: grid;
+    place-content: center;
+    height: 80vh;
+}
+::ng-deep .p-timeline-event {
+    min-height: 110px !important;
+}

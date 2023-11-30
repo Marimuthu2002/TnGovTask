@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 import { BehaviorSubject, Observable, map } from 'rxjs';
@@ -63,6 +63,15 @@ export class AuthService {
         return res;
       })
     );
+  }
+
+  genaratePdf(user: any): Observable<any> {
+    debugger;
+    const headers = new HttpHeaders({ 'Content-Type': 'application/json' });
+      return this.http.post('https://localhost:7101/api/User/GenaratePdf',user, {
+        observe: 'response',
+        responseType: 'blob' as 'json',
+      });
   }
 
   isLoggerIn(): boolean {

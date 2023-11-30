@@ -3,15 +3,19 @@ import { CommonModule } from '@angular/common';
 
 import { SuperAdminRoutingModule } from './super-admin-routing.module';
 import { SuperAdminComponent } from './super-admin.component';
+import { DashbordComponent } from './dashbord/dashbord.component';
+import { PrimengModule } from 'src/app/helper/primeng/primeng.module';
 
 
 @NgModule({
   declarations: [
-    SuperAdminComponent
+    SuperAdminComponent,
+    DashbordComponent
   ],
   imports: [
     CommonModule,
-    SuperAdminRoutingModule
+    SuperAdminRoutingModule,
+    PrimengModule
   ]
 })
 export class SuperAdminModule { }

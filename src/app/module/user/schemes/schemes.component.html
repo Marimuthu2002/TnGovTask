@@ -1,0 +1,211 @@
+<p-dialog header="If You Confirm Your Data" [(visible)]="visible" [modal]="true" [style]="{ width: '70vw' }"
+    [draggable]="false" [resizable]="false">
+    <ng-template pTemplate="body">
+        <div class="grid">
+            <div class="lg:col-6 mt-5 mb-4">
+                <input pInputText type="text" [(ngModel)]="tempData.firstname" class="p-inputtext-sm  w-full"
+                    placeholder="Firstname" />
+            </div>
+            <div class="lg:col-6 mt-5 mb-4">
+                <input pInputText type="text" [(ngModel)]="tempData.lastname" class="p-inputtext-sm  w-full"
+                    placeholder="Lastname" />
+            </div>
+        </div>
+        <div class="grid">
+            <div class="lg:col-6 mb-4">
+                <input pInputText type="text" [(ngModel)]="tempData.gmail" class="p-inputtext-sm w-full"
+                    placeholder="Gender" />
+            </div>
+            <div class="lg:col-6 mb-4">
+                <input pInputText type="text" [(ngModel)]="tempData.phoneNumber" class="p-inputtext-sm  w-full"
+                    placeholder="Age" />
+            </div>
+        </div>
+        <div class="grid">
+            <div class="lg:col-6 mb-4">
+                <input pInputText type="text" [(ngModel)]="tempData.adharNumber" class="p-inputtext-sm  w-full"
+                    placeholder="Caste" />
+            </div>
+            <div class="lg:col-6 mb-4">
+                <input pInputText type="text" [(ngModel)]="tempData.adharNumber" class="p-inputtext-sm  w-full"
+                    placeholder="Annual Income" />
+            </div>
+        </div>
+    </ng-template>
+    <ng-template pTemplate="footer">
+        <button pButton class="p-button-secondary" (click)="editData()" label="Cancel"></button>
+        <p-button (click)="submitData(tempData)" label="Submit"></p-button>
+    </ng-template>
+</p-dialog>
+<div>
+    <ul>
+        <li class="list-none py-2">
+            <div class="flex">
+                <i class="fa fa-bullhorn" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;
+                <p class="m-0" (click)="applyScheme()">Amma Two Wheeler Scheme for Working Women</p>&nbsp;&nbsp;&nbsp;
+                <a download="Amma Two Wheeler Yojana.pdf" target="_blank"
+                    href="assets/schemeDeteils/Amma Two Wheeler Yojana.pdf" class="newContent">
+                    <i class="fa fa-download cursor-pointer" pTooltip="Scheme Details" aria-hidden="true"></i>
+                </a>
+
+            </div>
+        </li>
+        <li class="list-none py-2">
+            <div class="flex">
+                <i class="fa fa-bullhorn" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;
+                <p class="m-0" (click)="applyScheme()">Moovalur Ramamirtham Ammaiyar Education Assurance Scheme</p>&nbsp;&nbsp;&nbsp;
+                <a download="Moovalur Ramamirtham Ammaiyar Education Assurance Scheme Official Guidelines.pdf"
+                    target="_blank"
+                    href="./../../../../assets/schemeDeteils/Moovalur Ramamirtham Ammaiyar Education Assurance Scheme Official Guidelines.pdf"
+                    class="newContent">
+                    <i class="fa fa-download cursor-pointer" pTooltip="Scheme Details" aria-hidden="true"></i>
+                </a>
+            </div>
+        </li>
+        <li class="list-none py-2">
+            <div class="flex">
+                <i class="fa fa-bullhorn" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;
+                <p class="m-0" (click)="applyScheme()">Tamil Nadu Unemployment Assistance Scheme</p>&nbsp;&nbsp;&nbsp;
+                <a download="Moovalur Ramamirtham Ammaiyar Education Assurance Scheme Official Guidelines.pdf"
+                    target="_blank"
+                    href="./../../../../assets/schemeDeteils/Moovalur Ramamirtham Ammaiyar Education Assurance Scheme Official Guidelines.pdf"
+                    class="newContent">
+                    <i class="fa fa-download cursor-pointer" pTooltip="Scheme Details" aria-hidden="true"></i>
+                </a>
+            </div>
+        </li>
+        <li class="list-none py-2">
+            <div class="flex">
+                <i class="fa fa-bullhorn" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;
+                <p class="m-0" (click)="applyScheme()">Tamil Nadu Marriage Assistance Scheme</p>&nbsp;&nbsp;&nbsp;
+                <a download="Moovalur Ramamirtham Ammaiyar Education Assurance Scheme Official Guidelines.pdf"
+                    target="_blank"
+                    href="./../../../../assets/schemeDeteils/Moovalur Ramamirtham Ammaiyar Education Assurance Scheme Official Guidelines.pdf"
+                    class="newContent">
+                    <i class="fa fa-download cursor-pointer" pTooltip="Scheme Details" aria-hidden="true"></i>
+                </a>
+            </div>
+        </li>
+        <li class="list-none py-2">
+            <div class="flex">
+                <i class="fa fa-bullhorn" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;
+                <p class="m-0" (click)="applyScheme()">Chief Minister Comprehensive Health Insurance Scheme</p>&nbsp;&nbsp;&nbsp;
+                <a download="Moovalur Ramamirtham Ammaiyar Education Assurance Scheme Official Guidelines.pdf"
+                    target="_blank"
+                    href="./../../../../assets/schemeDeteils/Moovalur Ramamirtham Ammaiyar Education Assurance Scheme Official Guidelines.pdf"
+                    class="newContent">
+                    <i class="fa fa-download cursor-pointer" pTooltip="Scheme Details" aria-hidden="true"></i>
+                </a>
+            </div>
+        </li>
+        <li class="list-none py-2">
+            <div class="flex">
+                <i class="fa fa-bullhorn" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;
+                <p class="m-0" (click)="applyScheme()">Tamil Nadu Chief Minister’s Solar Rooftop Capital Incentive Scheme</p>&nbsp;&nbsp;&nbsp;
+                <a download="Moovalur Ramamirtham Ammaiyar Education Assurance Scheme Official Guidelines.pdf"
+                    target="_blank"
+                    href="./../../../../assets/schemeDeteils/Moovalur Ramamirtham Ammaiyar Education Assurance Scheme Official Guidelines.pdf"
+                    class="newContent">
+                    <i class="fa fa-download cursor-pointer" pTooltip="Scheme Details" aria-hidden="true"></i>
+                </a>
+            </div>
+        </li>
+        <li class="list-none py-2">
+            <div class="flex">
+                <i class="fa fa-bullhorn" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;
+                <p class="m-0" (click)="applyScheme()">Tamil Nadu Magalir Urimai Thogai Scheme</p>&nbsp;&nbsp;&nbsp;
+                <a download="Moovalur Ramamirtham Ammaiyar Education Assurance Scheme Official Guidelines.pdf"
+                    target="_blank"
+                    href="./../../../../assets/schemeDeteils/Moovalur Ramamirtham Ammaiyar Education Assurance Scheme Official Guidelines.pdf"
+                    class="newContent">
+                    <i class="fa fa-download cursor-pointer" pTooltip="Scheme Details" aria-hidden="true"></i>
+                </a>
+            </div>
+        </li>
+        <li class="list-none py-2">
+            <div class="flex">
+                <i class="fa fa-bullhorn" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;
+                <p class="m-0" (click)="applyScheme()">Tamil Nadu Chief Minister Breakfast Scheme</p>&nbsp;&nbsp;&nbsp;
+                <a download="Moovalur Ramamirtham Ammaiyar Education Assurance Scheme Official Guidelines.pdf"
+                    target="_blank"
+                    href="./../../../../assets/schemeDeteils/Moovalur Ramamirtham Ammaiyar Education Assurance Scheme Official Guidelines.pdf"
+                    class="newContent">
+                    <i class="fa fa-download cursor-pointer" pTooltip="Scheme Details" aria-hidden="true"></i>
+                </a>
+            </div>
+        </li>
+
+        <li class="list-none py-2">
+            <div class="flex">
+                <i class="fa fa-bullhorn" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;
+                <p class="m-0" (click)="applyScheme()"> Tamil Nadu Zero Ticket Bus Travel Scheme for Women</p>&nbsp;&nbsp;&nbsp;
+                <a download="Moovalur Ramamirtham Ammaiyar Education Assurance Scheme Official Guidelines.pdf"
+                    target="_blank"
+                    href="./../../../../assets/schemeDeteils/Moovalur Ramamirtham Ammaiyar Education Assurance Scheme Official Guidelines.pdf"
+                    class="newContent">
+                    <i class="fa fa-download cursor-pointer" pTooltip="Scheme Details" aria-hidden="true"></i>
+                </a>
+            </div>
+        </li>
+        <li class="list-none py-2">
+            <div class="flex">
+                <i class="fa fa-bullhorn" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;
+                <p class="m-0" (click)="applyScheme()">Tamil Nadu Pudhumai Penn Scheme</p>&nbsp;&nbsp;&nbsp;
+                <a download="Moovalur Ramamirtham Ammaiyar Education Assurance Scheme Official Guidelines.pdf"
+                    target="_blank"
+                    href="./../../../../assets/schemeDeteils/Moovalur Ramamirtham Ammaiyar Education Assurance Scheme Official Guidelines.pdf"
+                    class="newContent">
+                    <i class="fa fa-download cursor-pointer" pTooltip="Scheme Details" aria-hidden="true"></i>
+                </a>
+            </div>
+        </li>
+        <li class="list-none py-2">
+            <div class="flex">
+                <i class="fa fa-bullhorn" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;
+                <p class="m-0" (click)="applyScheme()">Tamil Nadu Unemployed Youth Employment Generation Programme </p>&nbsp;&nbsp;&nbsp;
+                <a download="Moovalur Ramamirtham Ammaiyar Education Assurance Scheme Official Guidelines.pdf"
+                    target="_blank"
+                    href="./../../../../assets/schemeDeteils/Moovalur Ramamirtham Ammaiyar Education Assurance Scheme Official Guidelines.pdf"
+                    class="newContent">
+                    <i class="fa fa-download cursor-pointer" pTooltip="Scheme Details" aria-hidden="true"></i>
+                </a>
+            </div>
+        </li>
+        <li class="list-none py-2">
+            <div class="flex">
+                <i class="fa fa-bullhorn" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;
+                <p class="m-0" (click)="applyScheme()">Tamil Nadu New Entrepreneur cum Enterprise Development Scheme</p>&nbsp;&nbsp;&nbsp;
+                <a download="Moovalur Ramamirtham Ammaiyar Education Assurance Scheme Official Guidelines.pdf"
+                    target="_blank"
+                    href="./../../../../assets/schemeDeteils/Moovalur Ramamirtham Ammaiyar Education Assurance Scheme Official Guidelines.pdf"
+                    class="newContent">
+                    <i class="fa fa-download cursor-pointer" pTooltip="Scheme Details" aria-hidden="true"></i>
+                </a>
+            </div>
+        </li>
+        <li class="list-none py-2">
+            <div class="flex">
+                <i class="fa fa-bullhorn" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;
+                <p class="m-0" (click)="applyScheme()">Tamil Nadu Kalaignar Magalir Urimai Thittam Scheme</p>&nbsp;&nbsp;&nbsp;
+                <a download="Moovalur Ramamirtham Ammaiyar Education Assurance Scheme Official Guidelines.pdf"
+                    target="_blank"
+                    href="./../../../../assets/schemeDeteils/Moovalur Ramamirtham Ammaiyar Education Assurance Scheme Official Guidelines.pdf"
+                    class="newContent">
+                    <i class="fa fa-download cursor-pointer" pTooltip="Scheme Details" aria-hidden="true"></i>
+                </a>
+            </div>
+        </li>
+        <li class="list-none py-2">
+            <div class="flex">
+                <i class="fa fa-bullhorn" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;
+                <p class="m-0" (click)="applyScheme()">Tamil Nadu Chief Minister Fellowship Programme</p>&nbsp;&nbsp;&nbsp;
+                <a download="Moovalur Ramamirtham Ammaiyar Education Assurance Scheme Official Guidelines.pdf"
+                    target="_blank"
+                    href="./../../../../assets/schemeDeteils/Moovalur Ramamirtham Ammaiyar Education Assurance Scheme Official Guidelines.pdf"
+                    class="newContent">
+                    <i class="fa fa-download cursor-pointer" pTooltip="Scheme Details" aria-hidden="true"></i>
+                </a>
+            </div>
+        </li>
+    </ul>
+</div>
