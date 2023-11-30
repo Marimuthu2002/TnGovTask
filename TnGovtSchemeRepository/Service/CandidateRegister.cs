@@ -10,6 +10,7 @@ using TnGovtSchemeCommon.Helper;
 using TnGovtSchemeCommon.Model;
 using TnGovtSchemeRepository.InterFace;
 using Microsoft.Extensions.Configuration;
+using System.Net.Http.Headers;
 
 namespace TnGovtSchemeRepository.Service
 {
@@ -38,11 +39,11 @@ namespace TnGovtSchemeRepository.Service
             return card;
         }
 
-        public async Task<List<RegisterModel>> GetAllUserData()
-        {
-            var data = await _context.CandidateRegister.ToListAsync();
-            return data;
-        }
+        /* public async Task<List<RegisterModel>> GetAllUserData()
+         {
+             var data = await _context.CandidateRegister.ToListAsync();
+             return data;
+         }*/
 
         public async Task<ResponseMessage> Login(LoginModel employee)
         {
@@ -64,6 +65,45 @@ namespace TnGovtSchemeRepository.Service
             }
 
             return ResponseMessage.New(ResponseCode.BadRequest, "UserName or Password incorrect");
+        }
+
+        public async Task<byte[]> GeneratePdf(LoginModel employee)
+        {
+            var data = await _context.CandidateRegister
+                .Where(a => a.UserName == employee.UserName)
+                .FirstOrDefaultAsync();
+
+            if (data != null)
+            {
+                PdfGenrate pdf = new PdfGenrate();
+                byte[] datas = pdf.GeneratePdf(data);
+                return datas;
+            }
+
+            return null;
+        }
+
+        public async Task<List<getUserModel>> GetEmploye()
+        {
+            var data = await _context.CandidateRegister.ToListAsync();
+            var data1 = new List<getUserModel>();
+            foreach (var item in data)
+            {
+                getUserModel getUserModels = new getUserModel()
+                {
+                    Firstname = item.Firstname,
+                    Lastname = item.Lastname,
+                    UserName = item.UserName,
+                    Aadhar = item.Aadhar,
+                    DateOfBirth = item.DateOfBirth,
+                    Email = item.Email,
+                    Mobilenumber = item.Mobilenumber,
+                    Role = item.Role
+                };
+                data1.Add(getUserModels);
+            }
+
+            return data1;
         }
 
     }

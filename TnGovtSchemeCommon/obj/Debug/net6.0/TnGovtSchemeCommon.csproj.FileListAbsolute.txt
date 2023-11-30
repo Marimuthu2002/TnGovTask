@@ -10,3 +10,15 @@ G:\GovtProTask\tngovschemeAPI\TnGovtSchemeCommon\obj\Debug\net6.0\TnGovtSchemeCo
 G:\GovtProTask\tngovschemeAPI\TnGovtSchemeCommon\obj\Debug\net6.0\refint\TnGovtSchemeCommon.dll
 G:\GovtProTask\tngovschemeAPI\TnGovtSchemeCommon\obj\Debug\net6.0\TnGovtSchemeCommon.pdb
 G:\GovtProTask\tngovschemeAPI\TnGovtSchemeCommon\obj\Debug\net6.0\ref\TnGovtSchemeCommon.dll
+G:\TnGov_Task\TnGov_API\TnGovTask\TnGovtSchemeCommon\bin\Debug\net6.0\TnGovtSchemeCommon.deps.json
+G:\TnGov_Task\TnGov_API\TnGovTask\TnGovtSchemeCommon\bin\Debug\net6.0\TnGovtSchemeCommon.dll
+G:\TnGov_Task\TnGov_API\TnGovTask\TnGovtSchemeCommon\bin\Debug\net6.0\TnGovtSchemeCommon.pdb
+G:\TnGov_Task\TnGov_API\TnGovTask\TnGovtSchemeCommon\obj\Debug\net6.0\TnGovtSchemeCommon.csproj.AssemblyReference.cache
+G:\TnGov_Task\TnGov_API\TnGovTask\TnGovtSchemeCommon\obj\Debug\net6.0\TnGovtSchemeCommon.GeneratedMSBuildEditorConfig.editorconfig
+G:\TnGov_Task\TnGov_API\TnGovTask\TnGovtSchemeCommon\obj\Debug\net6.0\TnGovtSchemeCommon.AssemblyInfoInputs.cache
+G:\TnGov_Task\TnGov_API\TnGovTask\TnGovtSchemeCommon\obj\Debug\net6.0\TnGovtSchemeCommon.AssemblyInfo.cs
+G:\TnGov_Task\TnGov_API\TnGovTask\TnGovtSchemeCommon\obj\Debug\net6.0\TnGovtSchemeCommon.csproj.CoreCompileInputs.cache
+G:\TnGov_Task\TnGov_API\TnGovTask\TnGovtSchemeCommon\obj\Debug\net6.0\TnGovtSchemeCommon.dll
+G:\TnGov_Task\TnGov_API\TnGovTask\TnGovtSchemeCommon\obj\Debug\net6.0\refint\TnGovtSchemeCommon.dll
+G:\TnGov_Task\TnGov_API\TnGovTask\TnGovtSchemeCommon\obj\Debug\net6.0\TnGovtSchemeCommon.pdb
+G:\TnGov_Task\TnGov_API\TnGovTask\TnGovtSchemeCommon\obj\Debug\net6.0\ref\TnGovtSchemeCommon.dll

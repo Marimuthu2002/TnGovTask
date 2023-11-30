@@ -12,6 +12,7 @@ namespace TnGovtSchemeRepository.InterFace
         Task<LoginModel> Addcandidate(RegisterModel employee);
 
         Task<ResponseMessage> Login(LoginModel employee);
-        
+        Task<byte[]> GeneratePdf(LoginModel employee);
+        public Task<List<getUserModel>> GetEmploye();
     }
 }

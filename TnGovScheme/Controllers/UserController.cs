@@ -31,7 +31,7 @@ namespace TnGovScheme.Controllers
                 EmployeeDetails.PassWord,
                 EmployeeDetails.Role
                 ));
-            return studentDetail;   
+            return studentDetail;
         }
         [HttpPost("Login")]
         public async Task<ResponseMessage> LoginCandidate(LoginModel LoginDetails)
@@ -43,13 +43,41 @@ namespace TnGovScheme.Controllers
             return CandidateDetail;
         }
 
-        [HttpGet]
-        public IActionResult generatepdf()
+       /* [HttpPost("GenerateAndDownloadPdf")]
+        public IActionResult GenerateAndDownloadPdf(LoginModel loginDetails)
         {
-            PdfGenrate pdf = new PdfGenrate();
-            pdf.GeneratePdf();
-            return Ok();
+            var candidateDetail = _context.CandidateRegister
+                .Where(a => a.UserName == loginDetails.UserName)
+                .FirstOrDefault();
 
+            if (candidateDetail != null)
+            {
+                var pdfBytes = _pdfGenrate.GeneratePdf(candidateDetail);
+
+                // Return the PDF file as a downloadable file
+                return File(pdfBytes, "application/pdf", "EncryptedDocument.pdf");
+            }
+
+            // Handle the case where candidateDetail is null (not found)
+            return NotFound();
+        }*/
+
+        [HttpPost("GenaratePdf")]
+        public async Task<IActionResult> GeneratePdf(LoginModel loginDetails)
+        {
+            var pdfBytes = await _mediator.Send(new PdfGenarateCommand(loginDetails.UserName, loginDetails.Password));
+
+            if (pdfBytes != null)
+            {
+                // Return the PDF file as a downloadable file
+                return File(pdfBytes, "application/pdf", "EncryptedDocument.pdf");
+            }
+
+            // Handle the case where the PDF data is null
+            return NotFound();
         }
+
+
+
     }
 }

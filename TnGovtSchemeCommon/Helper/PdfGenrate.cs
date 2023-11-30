@@ -3,12 +3,16 @@ using Syncfusion.Drawing;
 using Syncfusion.Pdf;
 using Syncfusion.Pdf.Graphics;
 using Syncfusion.Pdf.Security;
+using System.Reflection.Metadata;
+using TnGovtSchemeCommon.Model;
 
 namespace TnGovtSchemeCommon.Helper
 {
     public class PdfGenrate
     {
-        public async Task GeneratePdf()
+       
+
+        public byte[] GeneratePdf(RegisterModel data)
         {
             PdfDocument document = new PdfDocument();
 
@@ -16,7 +20,7 @@ namespace TnGovtSchemeCommon.Helper
 
             PdfGraphics graphics = page.Graphics;
 
-            PdfStandardFont font = new PdfStandardFont(PdfFontFamily.TimesRoman, 20f, PdfFontStyle.Bold);
+            PdfStandardFont font = new PdfStandardFont(PdfFontFamily.TimesRoman, 30f, PdfFontStyle.Bold);
 
             PdfSecurity security = document.Security;
 
@@ -25,21 +29,26 @@ namespace TnGovtSchemeCommon.Helper
 
             security.Permissions = PdfPermissionsFlags.Print | PdfPermissionsFlags.FullQualityPrint;
 
-            security.OwnerPassword = "SyncOPÜ256PDF";
+            security.OwnerPassword = data.DateOfBirth.ToString("yyyy");
             security.UserPassword = "SyncUP€99PDF";
 
+
             PointF point = new PointF(10, 10);
-            graphics.DrawString($"<html><body><h5>Data</h5></body></html>{}", font, PdfBrushes.Black, point);
+            graphics.DrawString($"UserName: {data.UserName}\nPassWord: {data.PassWord}", font, PdfBrushes.Black, point);
 
-            string filePath = "C:\\Users\\visualapp\\Music\\PasswordProtecedPDFDoc\\EncryptedDocument.pdf";
-
-            using (System.IO.FileStream fileStream = new System.IO.FileStream(filePath, System.IO.FileMode.Create))
+            // Create a memory stream to hold the PDF content
+            using (MemoryStream memoryStream = new MemoryStream())
             {
-                document.Save(fileStream);
+                document.Save(memoryStream);
+                memoryStream.Position = 0;
+
+                // Get the byte array from the memory stream
+                byte[] pdfBytes = memoryStream.ToArray();
+
+                document.Close(true);
+
+                return pdfBytes;
             }
-
-            document.Close(true);
-
         }
 
     }

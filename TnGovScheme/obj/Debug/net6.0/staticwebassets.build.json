@@ -1,11 +1,37 @@
 {
   "Version": 1,
-  "Hash": "DjGx1xSHX2fU1KxLB+Ta9VVF6IB7lL9SymXlGHBOZV0=",
+  "Hash": "76oZiR9Zar4u8uLo//+J9JtgczwmHxDmALkM5TUNesw=",
   "Source": "TnGovScheme",
   "BasePath": "_content/TnGovScheme",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
-  "DiscoveryPatterns": [],
-  "Assets": []
+  "DiscoveryPatterns": [
+    {
+      "Name": "TnGovScheme\\wwwroot",
+      "Source": "TnGovScheme",
+      "ContentRoot": "G:\\TnGov_Task\\TnGov_API\\TnGovTask\\TnGovScheme\\wwwroot\\",
+      "BasePath": "_content/TnGovScheme",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "G:\\TnGov_Task\\TnGov_API\\TnGovTask\\TnGovScheme\\wwwroot\\Certificate\\TN001\\TN001.pdf",
+      "SourceId": "TnGovScheme",
+      "SourceType": "Discovered",
+      "ContentRoot": "G:\\TnGov_Task\\TnGov_API\\TnGovTask\\TnGovScheme\\wwwroot\\",
+      "BasePath": "_content/TnGovScheme",
+      "RelativePath": "Certificate/TN001/TN001.pdf",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Certificate\\TN001\\TN001.pdf"
+    }
+  ]
 }

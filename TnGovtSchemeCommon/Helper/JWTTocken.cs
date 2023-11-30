@@ -26,7 +26,8 @@ namespace TnGovtSchemeCommon.Helper
             var claims = new[]
             {
                 new Claim("Role",user.Role),
-                new Claim("Id",user.Candidate_Id.ToString())
+                new Claim("Id",user.Candidate_Id.ToString()),
+                new Claim ("UserName", user.UserName.ToString())
             };
 
             var token = new JwtSecurityToken(_config["Jwt:Issuer"],

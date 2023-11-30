@@ -12,6 +12,7 @@ namespace TnGovtSchemeCommon.Helper
     {
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options):base(options) { }
         public DbSet<RegisterModel> CandidateRegister { get; set; }
+        
 
     }
 }
